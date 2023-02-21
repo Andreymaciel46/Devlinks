@@ -5,23 +5,31 @@
 }
 :root {
   --text-color: white;
-  --bg-url: url(./ASSETS/bg-mobile.jpg);
+  --bg-url: linear-gradient(
+    #181818 60%,
+    rgb(43, 30, 87)
+  )  /*url(./ASSETS/bg-mobile.jpg)*/;
   --stroke-color: rgba(255, 255, 255, 0.5);
   --surface-color: rgba(255, 255, 255, 0.05);
   --surface-color-hover: rgba(255, 255, 255, 0.05);
   --switch--br-url: url(./ASSETS/MoonStars.svg);
   /*--switch-button: 1;*/
+
   
 }
 
 .light {
   --text-color: black;
-  --bg-url: url(./ASSETS/bg-mobile-light.jpg);
+  --bg-url: linear-gradient(
+    #ffffff 60%,
+    rgb(0, 0, 0)
+  );
   --stroke-color: rgba(0, 0, 0, 0.5);
   --surface-color: rgba(0, 0, 0, 0.05);
   --surface-color-hover: rgba(0, 0, 0, 0.2);
   --switch--br-url: url(./ASSETS/Sun.svg);
   /*--switch-button: 0;*/
+  
 }
 
 body {
@@ -31,7 +39,8 @@ body {
   background-size: cover; cobre toda a tela (Toda a área visível*/
 
   /*backgraund: color image repeat position/size*/
-  background: var(--bg-url) no-repeat top center/cover;
+  /*background: var(--bg-url) no-repeat top center/cover;*/
+  background-image: var(--bg-url);
   height: 100vh;
 }
 
@@ -84,7 +93,7 @@ body *{
 #switch button{
   width: 32px;
   height: 32px;
-  background: white var(--switch--br-url) no-repeat center;
+  background: white  var(--switch--br-url) no-repeat center;
   border-radius: 50%;
   border: 0;
   
@@ -98,6 +107,11 @@ body *{
   animation: slide-back 0.4s;
 
 }
+
+.light #switch button {
+  border: 1px solid rgb(8, 8, 8);
+}
+
 #switch button:hover {
   outline: 8px solid var(--surface-color-hover);
 }
