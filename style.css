@@ -40,7 +40,8 @@ body *{
 }
 
 #container {
-  width: 360px;
+  width: 100%;
+  max-width: 588px;
   /*A altura da caixa conteiner não deve ser fixa. A medina que vamos inserindo outras caixas, o container 
   vai assumir o tamanho do conteudo*/
   /*height: 712px;*/
