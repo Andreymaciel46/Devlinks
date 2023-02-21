@@ -19,7 +19,7 @@
   --bg-url: url(./ASSETS/bg-mobile-light.jpg);
   --stroke-color: rgba(0, 0, 0, 0.5);
   --surface-color: rgba(0, 0, 0, 0.05);
-  --surface-color-hover: rgba(0, 0, 0, 0.02);
+  --surface-color-hover: rgba(0, 0, 0, 0.2);
   --switch--br-url: url(./ASSETS/Sun.svg);
   --switch-button: 0;
 }
@@ -32,6 +32,7 @@ body {
 
   /*backgraund: color image repeat position/size*/
   background: var(--bg-url) no-repeat top center/cover;
+  height: 100vh;
 }
 
 body *{
@@ -161,7 +162,7 @@ ul li a:hover {
 }
 
 #social-links a:hover {
-  background: rgba(255, 255, 255, 0.2);
+  background: var(--surface-color-hover);
 }
 
 footer {
@@ -169,3 +170,15 @@ footer {
   text-align: center;
   font-size: 11px;
 }
+
+/*Midia queries*/
+/*@media (min-width: 700px) {
+  :root {
+    --bg-url: url(./ASSETS/bg-mobile.jpg);
+
+  }
+  .light {
+    --bg-url: url(./ASSETS/bg-mobile-light.jpg);
+  }
+
+}*/
